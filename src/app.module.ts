@@ -5,14 +5,16 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
 import { ProdutosModule } from './products/products.module';
+import { ConfiguracoesModule } from './configuracoes/configuracoes.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGO_URI || 'mongodb://localhost:27017/nome_do_banco'),
     UsersModule,
-    ProdutosModule
-  ],
+    ProdutosModule,
+    ConfiguracoesModule
+    ],
   controllers: [AppController],
   providers: [AppService],
 })
