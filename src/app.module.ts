@@ -6,6 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
 import { ProdutosModule } from './products/products.module';
 import { ConfiguracoesModule } from './configuracoes/configuracoes.module';
+import { PedidosModule } from './pedidos/pedidos.module';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { ConfiguracoesModule } from './configuracoes/configuracoes.module';
     MongooseModule.forRoot(process.env.MONGO_URI || 'mongodb://localhost:27017/nome_do_banco'),
     UsersModule,
     ProdutosModule,
-    ConfiguracoesModule
+    ConfiguracoesModule,
+    PedidosModule
     ],
   controllers: [AppController],
   providers: [AppService],

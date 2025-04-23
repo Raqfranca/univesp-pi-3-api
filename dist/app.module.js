@@ -14,6 +14,8 @@ const config_1 = require("@nestjs/config");
 const mongoose_1 = require("@nestjs/mongoose");
 const users_module_1 = require("./users/users.module");
 const products_module_1 = require("./products/products.module");
+const configuracoes_module_1 = require("./configuracoes/configuracoes.module");
+const pedidos_module_1 = require("./pedidos/pedidos.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -23,7 +25,9 @@ exports.AppModule = AppModule = __decorate([
             config_1.ConfigModule.forRoot(),
             mongoose_1.MongooseModule.forRoot(process.env.MONGO_URI || 'mongodb://localhost:27017/nome_do_banco'),
             users_module_1.UsersModule,
-            products_module_1.ProdutosModule
+            products_module_1.ProdutosModule,
+            configuracoes_module_1.ConfiguracoesModule,
+            pedidos_module_1.PedidosModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
