@@ -16,6 +16,7 @@ const users_module_1 = require("./users/users.module");
 const products_module_1 = require("./products/products.module");
 const configuracoes_module_1 = require("./configuracoes/configuracoes.module");
 const pedidos_module_1 = require("./pedidos/pedidos.module");
+const itens_module_1 = require("./itens-pedidos/itens.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -27,7 +28,8 @@ exports.AppModule = AppModule = __decorate([
             users_module_1.UsersModule,
             products_module_1.ProdutosModule,
             configuracoes_module_1.ConfiguracoesModule,
-            pedidos_module_1.PedidosModule
+            pedidos_module_1.PedidosModule,
+            itens_module_1.ItensPedidosModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
